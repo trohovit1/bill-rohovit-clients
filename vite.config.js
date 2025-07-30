@@ -9,6 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/bill-rohovit-clients/',
   // server: {
   //   port: 3000,
   // },
