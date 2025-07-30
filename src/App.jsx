@@ -32,7 +32,7 @@ function App() {
   }, [session]);
 
   const fetchClients = async () => {
-    const { data, error } = await supabase.from('other_schema.master_clients').select('*');
+    const { data, error } = await supabase.from('master_clients').select('*');
     if (error) console.error('Error fetching clients:', error);
     else setClients(data);
   };
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div style={{ maxWidth: 400, margin: '4rem auto', textAlign: 'center' }}>
-      <h1>Supabase Auth + Messages</h1>
+      <h1>Supabase Auth + Clients</h1>
 
       {!session ? (
         <>
