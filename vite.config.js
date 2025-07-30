@@ -5,11 +5,11 @@ import path from "path";
 export default defineConfig({
   base: '/bill-rohovit-clients/',
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     "@": path.resolve(__dirname, "./src"),
+  //   },
+  // },
   // server: {
   //   port: 3000,
   // },
