@@ -10,20 +10,20 @@ import { AppContextProvider, useAppContext } from "./context/appContext";
 function App() {
   const { username, setUsername, routeHash } = useAppContext();
 
-  if (routeHash) {
-    if (routeHash.endsWith("&type=recovery")) {
-      window.location.replace(`/login/${routeHash}`);
-    }
-    if (routeHash.startsWith("#error_code=404"))
-      return (
-        <div>
-          <p>This link has expired</p>
-          <a href="/" style={{ cursor: "pointer" }} variant="link">
-            Back to app
-          </a>
-        </div>
-      );
-  }
+  // if (routeHash) {
+  //   if (routeHash.endsWith("&type=recovery")) {
+  //     window.location.replace(`/login/${routeHash}`);
+  //   }
+  //   if (routeHash.startsWith("#error_code=404"))
+  //     return (
+  //       <div>
+  //         <p>This link has expired</p>
+  //         <a href="/" style={{ cursor: "pointer" }} variant="link">
+  //           Back to app
+  //         </a>
+  //       </div>
+  //     );
+  // }
   return (
     <Provider>
       <AppContextProvider>
